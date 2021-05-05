@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 const cheerio = require('cheerio');
 
-router.get('cheerio/api/v1/heartbeat', function (req, res, next) {
+router.get('/cheerio/api/v1/heartbeat', function (req, res, next) {
   res.json({ "success": true });
 });
 
-router.post('cheerio/api/v1/extract', function (req, res, next) {
+router.post('/cheerio/api/v1/extract', function (req, res, next) {
   if (!req.body) {
     res.json("body is empty")
   }
